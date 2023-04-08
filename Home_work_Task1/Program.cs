@@ -52,3 +52,19 @@
 //     }
 // }
 
+// // 3 Задание.
+// Console.WriteLine("3 Задание");
+// Console.Write("Введите число: ");
+// string number1 = Console.ReadLine();
+// int numberA = Convert.ToInt32(number1);
+// if(numberA % 2 == 0)
+// {
+//     Console.Write("Число является четным");
+// }
+// else
+// {
+//     Console.Write("Число не является четным");
+// }
+
+
+    

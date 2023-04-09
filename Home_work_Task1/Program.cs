@@ -67,36 +67,36 @@
 // }
 
 // 4 Задание.
-Console.WriteLine("4 Задание");
-Console.Write("Введите число: ");
-string number1 = Console.ReadLine();
-int n = Convert.ToInt32(number1);
-Console.Write("Четные числа от 1 до {0}:", n);
-int i = 2;
+// Console.WriteLine("4 Задание");
+// Console.Write("Введите число: ");
+// string number1 = Console.ReadLine();
+// int n = Convert.ToInt32(number1);
+// Console.Write("Четные числа от 1 до {0}:", n);
+// int i = 2;
 
-while(i <= n)
-{
-    Console.Write("{0} ", i);
-    i += 2;
+// while(i <= n)
+// {
+//     Console.Write("{0} ", i);
+//     i += 2;
 
-}
+// }
 
 
 // Это как решил ChatGPT не понятно и сложно пока что
 
   // Console.Write("Введите число: ");
-        // int n = int.Parse(Console.ReadLine());
+  //       int n = int.Parse(Console.ReadLine());
 
-        // Console.WriteLine("Четные числа от 1 до {0}:", n);
+  //       Console.WriteLine("Четные числа от 1 до {0}:", n);
 
-        // int i = 2; // начинаем с 2 (первое четное число)
-        // while (i <= n) { // пока i не превысило заданное число n
-        //     Console.Write("{0} ", i);
-        //     i += 2; // увеличиваем i на 2 на каждой итерации
-        // }
+  //       int i = 2; // начинаем с 2 (первое четное число)
+  //       while (i <= n) { // пока i не превысило заданное число n
+  //           Console.Write("{0} ", i);
+  //           i += 2; // увеличиваем i на 2 на каждой итерации
+  //       }
 
-        // Console.ReadLine();
-
+  //       Console.ReadLine();
+ 
 // using System;
 
 // class Program {

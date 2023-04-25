@@ -4,6 +4,46 @@
 
 // [345, 897, 568, 234] -> 2
 
+// int[] array = new int[5];
+// int number = 0;
+// void FillArray()
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(100, 1000);
+
+//     }
+//     return;
+// }
+// void PrintArray()
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write("[" + array[i] + "]");
+//     }
+  
+// }
+// void ChetIndexArray()
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         int chet = array[i] % 2;
+//         if (chet == 0)
+//         {
+
+//             number++;
+//             Console.WriteLine("Четное число в массиве: (" + array[i]+")");
+//         }
+//     }
+//     Console.WriteLine(number);
+//     return;
+// }
+
+// FillArray();
+// PrintArray();
+// Console.WriteLine();
+// ChetIndexArray();
+
 // Задача 36: Задайте одномерный массив, заполненный случайными числами 
 // (длина массива 5 элементов). Найдите сумму элементов, стоящих на нечётных 
 // индексах (индексы с нуля).
@@ -12,11 +52,50 @@
 
 // [-4, -6, 89, 6] -> 0
 
+// int[] array = new int[5];
+// int number = 0;
+// void FillArray()
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(0, 100);
+
+//     }
+//     return;
+// }
+// void PrintArray()
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write("[" + array[i] + "]");
+//     }
+//     return;
+  
+// }
+
+// void SummNechetIndexNumber()
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(i % 2 == 1)
+//         {
+//             number = number + array[i];
+//         }
+//     }
+//     Console.Write(number);
+//     return;
+// }
+// FillArray();
+// PrintArray();
+// Console.WriteLine();
+// SummNechetIndexNumber();
+
 // Задача 38: Задайте массив вещественных чисел от -100 до 100 
 // (длина массива 5 элементов). Найдите разницу между максимальным и 
 // минимальным элементов массива.
 
 // [3 7 22 2 78] -> 76
+
 
 // Доп. задачи
 // Задача 3: Задайте массив из 8 случайных чисел из промежутка [-9, 9]. 

@@ -1,0 +1,103 @@
+// Функции (или методы - это одно и то же): 
+// Объявление функций:
+// тип_данных название_функции(входные_параметры)
+
+// !!! ВАЖНО !!! 
+// функция должна возвращать переменную (или значение) того же типа данных, что у неё перед названием
+
+// Функция возвращающая результат:
+// return - специальное ключевое слово. Оно возвращает результат, который записан после неё
+// и останавливает выполнение функции
+// int - тип_данных, GetSquare - название_функции, number - входной_параметр
+// перед GetSquare тип данных int -> значит можем вернуть только целое число
+// int GetSquare(int number)
+// {
+//     int square = number * number; // получаем квадрат числа
+//     // return "hello";
+//     return square; // возвращение результата и завершение функции
+// }
+
+// // Пример функции с несколькими параметрами
+// int GetSum(int first, int second)
+// {
+//     return first + second;
+// }
+
+// // Пример функции с типом string
+// string MakeString(string first, string second)
+// {
+//     string newString = $"{first} {second}";
+//     return newString;
+// }
+
+// int x = GetSquare(6); // вызов функции
+// Console.WriteLine(x); // 25
+// int y = GetSum(5, 6); // вызов функции с несколькими параметрами (параметры указываются через запятую)
+// Console.WriteLine(y); // 11
+// string z = MakeString("Hello", "world"); // вызов функции с типом string
+// Console.WriteLine(z); // Hello world
+
+// !Пример нескольких return в функции + альтернативное решение задачи про число с консоли и день недели
+// string GetWeekDay(int dayNumber) 
+// {
+//     if (dayNumber < 1 || dayNumber > 7)
+//     {
+//         return $"Не существует дня с номером {dayNumber}";
+//     }
+
+//     string[] weekDays = { "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье" };
+//     return weekDays[dayNumber - 1];
+// }
+
+// Console.WriteLine ("Введи номер дня: ");
+// string textFromConsole = Console.ReadLine();
+// int weekDayNumber = Convert.ToInt32(textFromConsole);
+// Console.WriteLine();
+// string weekDay = GetWeekDay(weekDayNumber);
+// Console.WriteLine(weekDay);
+
+// !Окончание примера
+
+// Функция НЕ возвращающая результат:
+// void - тип данных специально для функций, которые ничего не возвращают
+// void PrintMessage(string message, int number) // void для функции, которая ничего не возвращает
+// {
+//     Console.WriteLine(message + " " + number);
+// }
+
+// PrintMessage("Моё сообщение номер: ", 5); // вызов функции
+// PrintMessage("Моё сообщение номер: ", 6);
+// PrintMessage("Моё сообщение номер: ", 7);
+
+
+// Использование return для остановки функции
+// void PrintMessage(string message, int number)
+// {
+//     if (number > 3)
+//     {
+//         Console.WriteLine("Слишком большой номер");
+//         return; // если number > 3, то выводим сообщение и заканчиваем выполнение функции
+//         // т.е. дальше выполнение кода не пойдёт
+//     }
+//     Console.WriteLine(message + " " + number);
+// }
+
+// PrintMessage("Моё сообщение номер: ", 4); // вызов функции
+
+// какая-то программа: считывает число с консоли и возвращает его квадрат
+// Все функции лучше описывать в начале программы (сверху)
+// int GetSquare(int number)
+// {
+//     return number * number;
+// }
+
+// string str = Console.ReadLine();
+// int x = int.Parse(str);
+// x = GetSquare(x);
+// Console.WriteLine(x);
+
+// Итог:
+// 1. Функция, которая возвращает результат (int, string, любой) -- 
+// это официант, который приносит блюдо (возвращает результат)
+// 2. Функция, которая не возвращает результат (void) -- 
+// это уборщица. Ничего конкретного на подносе не принесёт, но что-то делает и может изменять окружение

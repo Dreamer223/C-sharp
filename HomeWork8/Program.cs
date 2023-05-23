@@ -249,53 +249,47 @@
 // FillArray(Array);
 // PrintArray(Array);
 
-using System;
 
-class Program
-{
-    static void Main()
-    {
-        int[,,] threeDimensionalArray = new int[2, 2, 2];
-        Random random = new Random();
-        HashSet<int> generatedNumbers = new HashSet<int>();
+// int[,,] array = new int[2, 2, 2];
+// Random random = new Random();
+// HashSet<int> generatedNumbers = new HashSet<int>();
 
-        int xSize = threeDimensionalArray.GetLength(0);
-        int ySize = threeDimensionalArray.GetLength(1);
-        int zSize = threeDimensionalArray.GetLength(2);
+// int xSize = array.GetLength(0);
+// int ySize = array.GetLength(1);
+// int zSize = array.GetLength(2);
 
-        for (int i = 0; i < xSize; i++)
-        {
-            for (int j = 0; j < ySize; j++)
-            {
-                for (int k = 0; k < zSize; k++)
-                {
-                    int randomNumber;
-                    do
-                    {
-                        randomNumber = random.Next(10, 100);
-                    } while (generatedNumbers.Contains(randomNumber));
+// for (int i = 0; i < xSize; i++)
+// {
+//     for (int j = 0; j < ySize; j++)
+//     {
+//         for (int k = 0; k < zSize; k++)
+//         {
+//             int randomNumber;
+//             do
+//             {
+//                 randomNumber = random.Next(10, 100);
+//             } while (generatedNumbers.Contains(randomNumber));
 
-                    threeDimensionalArray[i, j, k] = randomNumber;
-                    generatedNumbers.Add(randomNumber);
-                }
-            }
-        }
+//             array[i, j, k] = randomNumber;
+//             generatedNumbers.Add(randomNumber);
+//         }
+//     }
+// }
 
-        for (int i = 0; i < xSize; i++)
-        {
-            for (int j = 0; j < ySize; j++)
-            {
-                for (int k = 0; k < zSize; k++)
-                {
-                    System.Console.Write(threeDimensionalArray[i, j, k]+ " ");
-                    Console.WriteLine($"Элемент[{i}, {j}, {k}]: {threeDimensionalArray[i, j, k]}");
-                }
+// for (int i = 0; i < xSize; i++)
+// {
+//     for (int j = 0; j < ySize; j++)
+//     {
+//         for (int k = 0; k < zSize; k++)
+//         {
+//             System.Console.Write(array[i, j, k] + " ");
+//             Console.WriteLine($"Элемент[{i}, {j}, {k}]: {array[i, j, k]}");
+//         }
 
-            }
-            System.Console.WriteLine();
-        }
-    }
-}
+//     }
+//     System.Console.WriteLine();
+// }
+
 
 
 
@@ -305,3 +299,55 @@ class Program
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+int n = 5; // размерность массива
+int[,] arr = new int[n, n]; // создаем массив
+
+int value = 1; // начальное значение для заполнения
+int row = 0; // начальная строка
+int col = 0; // начальный столбец
+
+while (value <= n * n) // пока не заполним весь массив
+{
+    // заполняем верхнюю строку слева направо
+    for (int i = col; i < n - col; i++)
+    {
+        arr[row, i] = value;
+        value++;
+    }
+
+    // заполняем правый столбец сверху вниз
+    for (int i = row + 1; i < n - row; i++)
+    {
+        arr[i, n - col - 1] = value;
+        value++;
+    }
+
+    // заполняем нижнюю строку справа налево
+    for (int i = n - col - 2; i >= col; i--)
+    {
+        arr[n - row - 1, i] = value;
+        value++;
+    }
+
+    // заполняем левый столбец снизу вверх
+    for (int i = n - row - 2; i > row; i--)
+    {
+        arr[i, col] = value;
+        value++;
+    }
+
+    // переходим к следующей внутренней спирали
+    row++;
+    col++;
+}
+
+// выводим массив на консоль
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        Console.Write(arr[i, j] + " ");
+    }
+    Console.WriteLine();
+}

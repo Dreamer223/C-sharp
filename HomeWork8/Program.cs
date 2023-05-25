@@ -212,42 +212,7 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
-// int rows=2;
-// int colums=2;
-// int depth=2;
-// int[,,] Array = new int[rows,colums,depth];
-// void FillArray(int[,,] array)
-// {
-//     for (int i = 0; i < rows; i++)
-//     {
-//         for (int j = 0; j < colums; j++)
-//         {
-//             for (int k = 0; k < depth; k++)
-//             {
-//                 array[i, j, k] = new Random().Next(10, 100);
-//             }
 
-//         }
-//     }
-// }
-
-// void PrintArray(int[,,] array)
-// {
-//     for (int i = 0; i < rows; i++)
-//     {
-//         for (int j = 0; j < colums; j++)
-//         {
-//             for (int k = 0; k < depth; k++)
-//             {
-//                  System.Console.Write("[" + array[i, j, k] + "]" + " ");
-//             }
-//         }
-//         System.Console.WriteLine();
-//     }
-// }
-
-// FillArray(Array);
-// PrintArray(Array);
 
 
 // int[,,] array = new int[2, 2, 2];

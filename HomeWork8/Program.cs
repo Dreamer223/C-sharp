@@ -300,49 +300,49 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int n = 5; // размерность массива
-int[,] arr = new int[n, n]; // создаем массив
+int n = 5; 
+int[,] arr = new int[n, n]; 
 
-int value = 1; // начальное значение для заполнения
-int row = 0; // начальная строка
-int col = 0; // начальный столбец
+int value = 1; 
+int row = 0; 
+int col = 0; 
 
-while (value <= n * n) // пока не заполним весь массив
+while (value <= n * n) 
 {
-    // заполняем верхнюю строку слева направо
+    
     for (int i = col; i < n - col; i++)
     {
         arr[row, i] = value;
         value++;
     }
 
-    // заполняем правый столбец сверху вниз
+   
     for (int i = row + 1; i < n - row; i++)
     {
         arr[i, n - col - 1] = value;
         value++;
     }
 
-    // заполняем нижнюю строку справа налево
+    
     for (int i = n - col - 2; i >= col; i--)
     {
         arr[n - row - 1, i] = value;
         value++;
     }
 
-    // заполняем левый столбец снизу вверх
+    
     for (int i = n - row - 2; i > row; i--)
     {
         arr[i, col] = value;
         value++;
     }
 
-    // переходим к следующей внутренней спирали
+    
     row++;
     col++;
 }
 
-// выводим массив на консоль
+
 for (int i = 0; i < n; i++)
 {
     for (int j = 0; j < n; j++)
